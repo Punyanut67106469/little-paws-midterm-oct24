@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="th">
+
+<head>
+    <title>Collection | Little Paws</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet" />
+    <meta content="หนัง เพลง หนังสือ และของที่ชอบ กลับมาดูเมื่อไรก็ยังชอบอยู่" name="description" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&amp;family=Noto+Sans+Thai:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="little-paws page-collection" id="top">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <header class="site-header">
+        <!-- place navbar here -->
+        <nav aria-label="เมนูหลัก" class="navbar navbar-expand-md navbar-light">
+            <!-- เติม: กรอบเมนู -->
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Little Paws.</a>
+                <!-- เติม: ปุ่มเปิดเมนู -->
+                <button aria-controls="mainNav" aria-label="เปิดเมนู" class="navbar-toggler" data-bs-target="#mainNav"
+                    data-bs-toggle="offcanvas" type="button">
+                    <i aria-hidden="true" class="icon" data-lucide="menu"></i>
+                </button>
+                <!-- เติม: offcanvas-md -->
+                <div aria-labelledby="menuTitle" class="offcanvas-md offcanvas-end" id="mainNav" tabindex="-1">
+                    <!-- เติม: หัวเมนูมือถือ -->
+                    <div class="offcanvas-header">
+                        <span id="menuTitle">Little Paws.</span>
+                        <button aria-label="ปิดเมนู" class="menu-close" data-bs-dismiss="offcanvas"
+                            data-bs-target="#mainNav" type="button">
+                            <i aria-hidden="true" class="icon" data-lucide="x"></i>
+                        </button>
+                    </div>
+                    <!-- เติม: เนื้อหาเมนู -->
+                    <div class="offcanvas-body">
+                        <!-- เติม: รายการลิงก์ -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="story.html">Story</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link active" href="collection.html">Collection</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                        </ul>
+                        <!-- เติม: ช่องทางติดต่อในเมนู -->
+                        <div class="mobile-contact">
+                            <a class="menu-email email-link" href="mailto:hello@example.com">
+                                <i aria-hidden="true" class="icon" data-lucide="mail-pen"></i>
+                                <span>hello@example.com</span>
+                            </a>
+                            <div class="menu-socials">
+                                <a href="https://www.instagram.com/" rel="noopener noreferrer"
+                                    target="_blank">Instagram</a>
+                                <a href="https://www.behance.net/" rel="noopener noreferrer" target="_blank">Behance</a>
+                                <a href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main" tabindex="-1">
+        <!-- หัวเรื่อง Collection -->
+        <section class="collection-intro container">
+            <h1>Meet the little<br /><em>cuties.</em></h1>
+            <p class="collection-subtitle">รวมเหล่าแมวเหมียวหลากหลายสีสันและความน่ารัก
+                เพราะแมวแต่ละตัวมีเสน่ห์ในแบบของตัวเอง ♡</p>
+        </section>
+        <!-- แถวภาพ Collection -->
+        <section aria-label="Collection" class="board-section">
+            <!-- ปุ่มเลื่อนภาพ -->
+            <div class="board-toolbar container">
+                <div class="board-navigation">
+                    <button aria-label="หยุดการเลื่อน" aria-pressed="false" class="motion-control" id="board-pause"
+                        type="button">
+                        <i aria-hidden="true" class="icon" data-lucide="pause"></i>
+                        <span>Pause</span>
+                    </button>
+                    <button aria-label="เลื่อนภาพก่อนหน้า" class="motion-control" id="board-prev" type="button">
+                        <i aria-hidden="true" class="icon" data-lucide="arrow-left"></i>
+                        <span>Previous</span>
+                    </button>
+                    <button aria-label="เลื่อนภาพถัดไป" class="motion-control" id="board-next" type="button">
+                        <span>Next</span>
+                        <i aria-hidden="true" class="icon" data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- กรอบภาพ -->
+            <div aria-label="ภาพในคอลเล็กชัน" class="board-viewport" id="board-viewport" role="region">
+                <!-- แถวภาพ -->
+                <div class="collage-board">
+                    <!-- รายการทั้งหมด -->
+                    <div class="collection-group">
+                        <!-- ภาพ Orange Cat -->
+                        <figure class="collection-item item-spirited item-high">
+                            <a aria-label="See details: Orange Cat" class="collection-image"
+                                href="detail.html?id=orange">
+                                <img alt="Orange Cat" draggable="false" src="assets/images/cats/photos/cat5.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>Orange Cat</h2>
+                                <p>เจ้าส้มจอมซน</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=orange">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- ภาพ Random Access Memories -->
+                        <figure class="collection-item item-ram item-low">
+                            <a aria-label="See details: Random Access Memories" class="collection-image"
+                                href="detail.html?id=white">
+                                <img alt="White Cat" draggable="false" src="assets/images/cats/photos/cat6.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>White Cat</h2>
+                                <p>ก้อนเมฆตัวน้อย</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=white">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- คำว่า Good company -->
+                        <div aria-hidden="true" class="scene-word">
+                            Good
+                            <br />
+                            <em>company.</em>
+                        </div>
+                        <!-- ภาพ The Little Prince -->
+                        <figure class="collection-item item-prince item-high">
+                            <a aria-label="See details: The Little Prince" class="collection-image"
+                                href="detail.html?id=black">
+                                <img alt="Black Cat" draggable="false" src="assets/images/cats/photos/cat7.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>Black Cat</h2>
+                                <p>เจ้าเงาตาแป๋ว</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=black">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- ภาพ Fujifilm X100 -->
+                        <figure class="collection-item item-x100 item-low">
+                            <a aria-label="See details: Fujifilm X100" class="collection-image"
+                                href="detail.html?id=calico">
+                                <img alt="Calico Cat" draggable="false" src="assets/images/cats/photos/cat8.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>Calico Cat</h2>
+                                <p>สามสีแสนสดใส</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=calico">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- ภาพ The Grand Budapest Hotel -->
+                        <figure class="collection-item item-budapest item-high">
+                            <a aria-label="See details: The Grand Budapest Hotel" class="collection-image"
+                                href="detail.html?id=tabby">
+                                <img alt="Tabby Cat" draggable="false" src="assets/images/cats/photos/cat9.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>Tabby Cat</h2>
+                                <p>เจ้าเสือน้อย</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=tabby">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- คำว่า Worth keeping -->
+                        <div aria-hidden="true" class="scene-word">
+                            Same
+                            <br />
+                            <em>feeling.</em>
+                        </div>
+                        <!-- ภาพ AM -->
+                        <figure class="collection-item item-am item-low">
+                            <a aria-label="See details: AM" class="collection-image" href="detail.html?id=fluffy">
+                                <img alt="Fluffy Cat" draggable="false" src="assets/images/cats/photos/cat10.jpg" />
+                            </a>
+                            <figcaption>
+                                <h2>Fluffy Cat</h2>
+                                <p>ก้อนขนเดินได้</p>
+                                <p class="item-maker">Little Paws Collection</p>
+                                <a class="text-link" href="detail.html?id=fluffy">
+                                    See details
+                                    <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <!-- ภาพ The Hobbit -->
+
+                        <!-- คำว่า One more song -->
+                        <div aria-hidden="true" class="scene-word">
+                            A little
+                            <br />
+                            <em>more.</em>
+                        </div>
+                        <!-- ภาพ Converse All Star -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <footer class="site-footer">
+            <!-- เติม: คอลัมน์ท้ายเว็บ -->
+            <div class="footer-main">
+                <!-- เติม: footer-brand -->
+                <a class="footer-brand" href="index.html">little paws. ♡</a>
+                <!-- เติม: nav -->
+                <nav aria-label="เมนูท้ายหน้า">
+                    <h2>Navigation</h2>
+                    <a href="index.html">Home</a>
+                    <a href="story.html">Story</a>
+                    <a href="collection.html">Collection</a>
+                    <a href="about.html">About</a>
+                </nav>
+                <!-- เติม: ช่องทางติดต่อ -->
+                <div class="footer-contact">
+                    <h2>Contact</h2>
+                    <!-- เติม: a -->
+                    <a href="mailto:hello@example.com">
+                        <i aria-hidden="true" class="icon" data-lucide="mail"></i>
+                        <span>hello@example.com</span>
+                    </a>
+                    <!-- เติม: ลิงก์โซเชียล -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">
+                            Instagram
+                            <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                        </a>
+                        <a href="https://www.behance.net/" rel="noopener noreferrer" target="_blank">
+                            Behance
+                            <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                        </a>
+                        <a href="https://github.com/" rel="noopener noreferrer" target="_blank">
+                            GitHub
+                            <i aria-hidden="true" class="icon" data-lucide="arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- เติม: แถวลิขสิทธิ์ -->
+            <div class="footer-bottom">
+                <span>© 2026 Little Paws</span>
+                <a href="#top">
+                    Back to top
+                    <i aria-hidden="true" class="icon" data-lucide="arrow-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!-- เติม: แถวลิขสิทธิ์ -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
